@@ -730,3 +730,8 @@ p {
     width:50%;
     margin-left:0
 }
+
+.help-block {
+    color: #999;
+    font-style: italic;
+}
