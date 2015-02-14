@@ -55,8 +55,8 @@
                 <p class="lead">Complete the short form below for a no-obligation consultation towards claiming your business tax credit</p>
             </div>
             <div class="row contact-wrap">
-                <form class="contact-form" method="post" action="">
-                    <div class="col-sm-6">
+                <div class="col-sm-6">
+                    <form class="contact-form" method="post" action="">
                         <h2>Business Information</h2>
                         <hr>
                         <div class="form-group">
@@ -95,18 +95,27 @@
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" style="text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5)">Request a Free Consultation</button>
                         </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <h2>Why?</h2>
+                    </form>
+                    <div id="postSubmit" style="display:none;">
+                        <h2>Congrats!</h2>
                         <hr>
-                        <p class='help-block'>Our expert small business tax consultants will reach out to you to set up a free consultation to assess your business needs and see if you qualify for the tax credit.</p>
-                        <p class='help-block'>We contract with reputable, Better Business Bureau Accredited, certified public accountanting firms who will be able to answer further questions and handle your needs.</p>
-                        <p class='help-block'>This is a no-risk, no-obligation consultation. If for any reason we are unable to successfully claim tax credits on your behalf, the entire consultation is free and you will never be charged for our services.</p>
-                        <p class='help-block'>If you do qualify, our experts can file, process, and apply for the tax credits on your behalf and your company will receive the tax credit certificate directly from the Illinois Department of Revenue.  For this service, we charge $495 for each $2500 tax credit your small business receives.</p>
-                        <p class='help-block'>Even if you do qualify, you may choose to decline our services, and if you elect to do so, you will not be charged.</p>
+                        <p>You've taken the first important step towards receiving your Illinois Small Business Tax Credit.</p>
+                        <p>
+                            We've received the inquiry for <span id="prospectName"></span> and will review it and get back to you ASAP.
+                            Our team will review the information and do our best to help you maximize the business credits you're eligible for!
+                        </p>
                     </div>
-                </form>
+                </div><!-- .col-sm-6 -->
+
+                <div class="col-sm-6">
+                    <h2>Why?</h2>
+                    <hr>
+                    <p class='help-block'>Our expert small business tax consultants will reach out to you to set up a free consultation to assess your business needs and see if you qualify for the tax credit.</p>
+                    <p class='help-block'>We contract with reputable, Better Business Bureau Accredited, certified public accountanting firms who will be able to answer further questions and handle your needs.</p>
+                    <p class='help-block'>This is a no-risk, no-obligation consultation. If for any reason we are unable to successfully claim tax credits on your behalf, the entire consultation is free and you will never be charged for our services.</p>
+                    <p class='help-block'>If you do qualify, our experts can file, process, and apply for the tax credits on your behalf and your company will receive the tax credit certificate directly from the Illinois Department of Revenue.  For this service, we charge $495 for each $2500 tax credit your small business receives.</p>
+                    <p class='help-block'>Even if you do qualify, you may choose to decline our services, and if you elect to do so, you will not be charged.</p>
+                </div>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#claim-page-->
@@ -156,16 +165,20 @@
                     dataType: "xml",
                     statusCode: {
                         0: function () {
-                            console.log("status code 0");
-                            // window.location.replace("ThankYou.html");
+                            displaySuccessMessage();
                         },
                         200: function () {
-                            console.log("success");
-                            // window.location.replace("ThankYou.html");
+                            displaySuccessMessage();
                         }
                     }
                 });
         }
+        afterSubmission = function() {
+            $("input").val("");
+            $("form.contact-form").fadeOut();
+            setTimeout(function() {$("#postSubmit").fadeIn()}, 500);
+        }
+
         var getDateString = function() {
             var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
             var now = new Date();
