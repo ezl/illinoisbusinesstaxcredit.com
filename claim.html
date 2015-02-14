@@ -6,7 +6,7 @@
     <meta name="description" content="Illinois Business Tax Credit">
     <meta name="author" content="Adrian Rusnac">
     <title>Illinois Business Tax Credit</title>
-    
+
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.ico">
 </head><!--/head-->
 
@@ -34,69 +34,69 @@
                     </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
                 </div>
-				
+
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="details.html">Program Details</a></li>
-                        <li><a href="qualify.html">Do I Qualify?</a></li> 
-                        <li class="claim"><a href="claim.html">Claim My Credit Now</a></li>                        
+                        <li><a href="qualify.html">Do I Qualify?</a></li>
+                        <li class="claim"><a href="claim.html">Claim My Credit Now</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-		
+
     </header><!--/header-->
 
     <section id="claim-page">
         <div class="container">
-            <div class="center">        
+            <div class="center">
                 <h2>Claim My Credit Now</h2>
                 <p class="lead">Complete the short form below for a no-obligation consultation towards claiming your business tax credit</p>
-            </div> 
-            <div class="row contact-wrap"> 
-                <form class="contact-form" method="post" action="contactengine.php">
+            </div>
+            <div class="row contact-wrap">
+                <form class="contact-form" method="post" action="">
                     <div class="col-sm-6">
                         <h2>Business Information</h2>
                         <hr>
                         <div class="form-group">
                             <label>What Is Your Name (Business Owner or Manager)?</label>
-                            <input type="text" name="t_name" class="form-control">
+                            <input name="entry.4565622" id="entry_4565622" type="text" class="form-control" aria-label="Owner  ">
                         </div>
                         <div class="form-group">
                             <label>What Is The Official Business Name?</label>
-                            <input type="text" name="t_businessname" class="form-control">
+                            <input name="entry.1362046301" id="entry_1362046301" type="text" class="form-control" aria-label="Business Name  ">
                         </div>
                         <div class="form-group">
                             <label>How Many Full Time Employees Were There On June 30, 2012?</label>
-                            <input type="text" name="t_employees2012" class="form-control">
+                            <input name="entry.1844231694" id="entry_1844231694" type="text" class="form-control" aria-label="FTE on 6/30/2012  ">
                             <p class="help-block">If you don't have the exact number now, just approximate.  We'll help you check against official records later if your company is eligible for the tax credit.</p>
                         </div>
                         <div class="form-group">
-                            <label>How Many Full Time Employees Were There On <script>var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; now = new Date(); document.write(monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear())</script>?</label>
-                            <input type="text" name="t_employees2015" class="form-control">
+                            <label>How Many Full Time Employees Were There On <span class="todaysdate"></span>?</label>
+                            <input name="entry.1015563316" id="entry_1015563316" type="text" class="form-control" aria-label="FTE today  ">
                             <p class="help-block"></p>
                         </div>
                         <div class="form-group">
                             <label>What Is The Best Phone Number To Reach You?</label>
-                            <input type="text" name="t_phone" class="form-control">
+                            <input name="entry.1580116003" id="entry_1580116003" type="text" class="form-control" aria-label="Phone  ">
                             <p class="help-block">Please provide your best contact phone number in case there are any questions from our team. We will not disclose or ever share this number with any third parties and it will only be used for helping you claim your tax credit.</p>
                         </div>
                         <div class="form-group">
                             <label>What Is The Best Email Address To Contact You?</label>
-                            <input type="email" name="t_email" class="form-control">
+                            <input name="entry.1767902019" id="entry_1767902019" type="text" class="form-control" aria-label="Email  ">
                             <p class="help-block">This should be the email address where you'll want your tax credit certificate emailed.  The Illinois Department of Revenue sends these electronically.  It can be a personal or a business email address.</p>
                         </div>
                         <div class="form-group">
                             <label>What Is The Best Time/Day To Contact You?</label>
-                            <input type="text" name="t_contact" class="form-control">
+                            <input name="entry.1975062" id="entry_1975062" type="text" class="form-control" aria-label="Best Contact Time/Day  ">
                             <p class="help-block"></p>
                         </div>
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" style="text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5)">Request a Free Consultation</button>
                         </div>
                     </div>
-                    
+
                     <div class="col-sm-6">
                         <h2>Why?</h2>
                         <hr>
@@ -106,7 +106,7 @@
                         <p class='help-block'>If you do qualify, our experts can file, process, and apply for the tax credits on your behalf and your company will receive the tax credit certificate directly from the Illinois Department of Revenue.  For this service, we charge $495 for each $2500 tax credit your small business receives.</p>
                         <p class='help-block'>Even if you do qualify, you may choose to decline our services, and if you elect to do so, you will not be charged.</p>
                     </div>
-                </form> 
+                </form>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#claim-page-->
@@ -134,6 +134,54 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+
+
+    <script>
+        function postContactToGoogle() {
+            var googleFormURL = 'https://docs.google.com/forms/d/1VuzW3Vw6C_FfXmScIuNI2p_ziFwnZTiaii0kSGdK0oY/formResponse';
+
+                $.ajax({
+                    url: googleFormURL,
+                    data: {
+                        "entry_1687893962" : getDateString(), // Today
+                        "entry_4565622"    : $("#entry_4565622").val(),
+                        "entry_1362046301" : $("#entry_1362046301").val(),
+                        "entry_1844231694" : $("#entry_1844231694").val(),
+                        "entry_1015563316" : $("#entry_1015563316").val(),
+                        "entry_1580116003" : $("#entry_1580116003").val(),
+                        "entry_1767902019" : $("#entry_1767902019").val(),
+                        "entry_1975062"    : $("#entry_1975062").val(),
+                    },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            console.log("status code 0");
+                            // window.location.replace("ThankYou.html");
+                        },
+                        200: function () {
+                            console.log("success");
+                            // window.location.replace("ThankYou.html");
+                        }
+                    }
+                });
+        }
+        var getDateString = function() {
+            var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+            var now = new Date();
+            var dateString = monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+            return dateString;
+        }
+
+        $(document).ready(function(){
+            $(".todaysdate").html(getDateString());
+            $(".contact-form").submit(function(event) {
+                console.log("submitting!");
+                postContactToGoogle();
+                event.preventDefault();
+            });
+        });
+    </script>
 
     <script type="text/javascript">
       (function() {
